@@ -1,0 +1,6 @@
+version: '2'
+services:
+  assetsservice:
+    image: vy-ms/tmx-assets-service:assignment12
+    ports:
+      - "8080:8080"
