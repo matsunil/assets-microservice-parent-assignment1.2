@@ -4,7 +4,7 @@ package com.thoughtmechanix.assets.model;
 public class Asset{
   private String id;
   private String organizationId;
-  private String productName;
+  private String assetName;
   private String assetType;
 
   public String getId() {
@@ -23,12 +23,12 @@ public class Asset{
     this.organizationId = organizationId;
   }
 
-  public String getProductName() {
-    return productName;
+  public String getAssetName() {
+    return assetName;
   }
 
-  public void setProductName(String productName) {
-    this.productName = productName;
+  public void setAssetName(String assetName) {
+    this.assetName = assetName;
   }
 
   public String getAssetType() {
@@ -49,8 +49,8 @@ public class Asset{
     return this;
   }
 
-  public Asset withProductName(String productName){
-    this.setProductName(productName);
+  public Asset withAssetName(String assetName){
+    this.setAssetName(assetName);
     return this;
   }
 

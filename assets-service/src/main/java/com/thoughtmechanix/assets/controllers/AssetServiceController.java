@@ -21,13 +21,13 @@ public class AssetServiceController {
     public Asset getAssets( @PathVariable("organizationId") String organizationId,
                                 @PathVariable("assetId") String assetId) {
 
-        //return assetService.getAsset(assetId);
-        return new Asset()
-            .withId(assetId)
-            .withOrganizationId(organizationId)
-            .withProductName("Teleco")
-            .withAssetType("Seat")
-            .withOrganizationId("TestOrg");
+        return assetService.getAsset(organizationId, assetId);
+//        return new Asset()
+//            .withId(assetId)
+//            .withOrganizationId(organizationId)
+//            .withAssetName("Teleco")
+//            .withAssetType("Seat")
+//            .withOrganizationId("TestOrg");
     }
 
     @RequestMapping(value="{assetId}",method = RequestMethod.PUT)

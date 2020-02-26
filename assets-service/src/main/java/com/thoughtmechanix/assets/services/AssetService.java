@@ -8,12 +8,12 @@ import java.util.UUID;
 @Service
 public class AssetService {
 
-    public Asset getAsset(String assetId){
+    public Asset getAsset(String organizationId, String assetId){
         return new Asset()
                 .withId(assetId)
-                .withOrganizationId( UUID.randomUUID().toString() )
-                .withProductName("Test Product Name")
-                .withAssetType("PerSeat");
+                .withOrganizationId(organizationId)
+                .withAssetName("Building")
+                .withAssetType("Tangible");
     }
 
     public void saveAsset(Asset asset){
