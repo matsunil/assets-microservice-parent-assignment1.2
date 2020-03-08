@@ -17,17 +17,16 @@ public class AssetServiceController {
     @Autowired
     private AssetService assetService;
 
+	/**
+	 * Get asset by asset id for organization by organization id
+	 * Using @PathVariable organizationId
+	 * Using @PathVariable assetId
+	 */
     @RequestMapping(value="/{assetId}",method = RequestMethod.GET)
     public Asset getAssets( @PathVariable("organizationId") String organizationId,
                                 @PathVariable("assetId") String assetId) {
 
         return assetService.getAsset(organizationId, assetId);
-//        return new Asset()
-//            .withId(assetId)
-//            .withOrganizationId(organizationId)
-//            .withAssetName("Teleco")
-//            .withAssetType("Seat")
-//            .withOrganizationId("TestOrg");
     }
 
     @RequestMapping(value="{assetId}",method = RequestMethod.PUT)
